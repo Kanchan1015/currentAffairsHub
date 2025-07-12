@@ -1,0 +1,25 @@
+# Bytecode and cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+
+# SQLite database
+*.db
+*.sqlite3
+
+# VS Code settings (optional)
+.vscode/
+
+# Jupyter Notebook checkpoints (if you use notebooks later)
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+
+# Environment files (optional if you use .env later)
+.env
+
+# Logs or debug files
+*.log
