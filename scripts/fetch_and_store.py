@@ -14,11 +14,16 @@ total_inserted = 0
 
 for feed in RSS_FEEDS:
     print(f"\n🔍 Fetching from {feed['source']}...")
+
     articles = fetch_articles_from_feed(
         feed_url=feed["url"],
-        category=feed["category"],
         source_name=feed["source"]
     )
+
+    print(f"📦 Parsed {len(articles)} articles.")
+    for article in articles:
+        print(f"📰 {article.title[:70]}... → 📚 Category: {article.category}")
+
     count = insert_unique_articles(articles, db)
     print(f"✅ {count} new articles inserted.")
     total_inserted += count
